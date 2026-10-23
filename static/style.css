@@ -1,0 +1,286 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b1020;
+    color: #f4f5ff;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 8%;
+    border-bottom: 1px solid #252c42;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #a78bfa;
+}
+
+.tagline {
+    color: #a8afc7;
+    font-size: 13px;
+}
+
+.container {
+    max-width: 950px;
+    margin: auto;
+    padding: 70px 24px 30px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.eyebrow {
+    color: #a78bfa;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 22px;
+}
+
+h1 {
+    font-size: clamp(36px, 6vw, 60px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+}
+
+h1 span {
+    color: #a78bfa;
+}
+
+.description {
+    max-width: 620px;
+    margin: 22px auto 0;
+    color: #a8afc7;
+    line-height: 1.8;
+}
+
+.analyzer {
+    background: #141b30;
+    border: 1px solid #2a3450;
+    border-radius: 18px;
+    padding: 28px;
+}
+
+.analyzer label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 180px;
+    resize: vertical;
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid #36415f;
+    background: #0b1020;
+    color: white;
+    font: inherit;
+    line-height: 1.7;
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #a78bfa;
+}
+
+textarea::placeholder {
+    color: #77809b;
+}
+
+.input-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+#charCount {
+    color: #929bb6;
+    font-size: 12px;
+}
+
+button {
+    cursor: pointer;
+    font: inherit;
+}
+
+#analyzeBtn {
+    background: #a78bfa;
+    color: #111329;
+    border: none;
+    border-radius: 9px;
+    padding: 14px 20px;
+    font-weight: bold;
+}
+
+#analyzeBtn:hover {
+    background: #c4b5fd;
+}
+
+#analyzeBtn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.examples {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-top: 22px;
+}
+
+.examples span {
+    color: #929bb6;
+    font-size: 12px;
+}
+
+.examples button {
+    border: 1px solid #36415f;
+    border-radius: 20px;
+    padding: 8px 12px;
+    background: transparent;
+    color: #d7d9e8;
+    font-size: 12px;
+}
+
+.examples button:hover {
+    border-color: #a78bfa;
+}
+
+.result {
+    margin-top: 28px;
+    border-radius: 12px;
+    padding: 24px;
+    background: #0b1020;
+    border: 1px solid #36415f;
+}
+
+.result-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #929bb6;
+}
+
+.result h2 {
+    margin: 12px 0;
+    font-size: 28px;
+}
+
+.result p:last-child {
+    color: #b7bfd7;
+    line-height: 1.7;
+}
+
+.result.positive {
+    border-color: #34d399;
+}
+
+.result.positive h2 {
+    color: #34d399;
+}
+
+.result.negative {
+    border-color: #fb7185;
+}
+
+.result.negative h2 {
+    color: #fb7185;
+}
+
+.result.error {
+    border-color: #fb7185;
+}
+
+.result.error h2 {
+    color: #fb7185;
+}
+
+.hidden {
+    display: none;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.info-card {
+    background: #141b30;
+    border: 1px solid #2a3450;
+    padding: 22px;
+    border-radius: 14px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.info-card h3 {
+    font-size: 19px;
+    color: #a78bfa;
+    margin-bottom: 10px;
+}
+
+.info-card p {
+    font-size: 12px;
+    color: #a8afc7;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    margin-top: 45px;
+    color: #77809b;
+    font-size: 12px;
+    line-height: 2;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 20px;
+        align-items: flex-start;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 48px 16px 24px;
+    }
+
+    .analyzer {
+        padding: 18px;
+    }
+
+    .input-footer {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    #analyzeBtn {
+        width: 100%;
+    }
+
+    .info {
+        grid-template-columns: 1fr;
+    }
+}
